@@ -1,0 +1,33 @@
+
+ <!---标题-->
+ 
+
+<!---个人信息-->
+<view class="add-address">
+
+
+
+<view class="form-item">
+  <!--选择框-->
+  <view class="select-list select-list-ownershiptype">
+    <!--选择条件-->
+    <view class="choice-bar">
+      <view bindtap="openOwnerShipSelect" class="chioce-item" hover-class="click-once-opaque">{{selectedOpenOwnerShipName}}
+      <image class="icon-chioce {{blOpenOwnerShip?'select-opened':'select-closed'}}" src="{{arrow_down}}"></image>
+      </view>
+      <cover-view class="chioce-list-ownershiptype sorting-list{{!blOpenOwnerShip?' chioce-list-hide':' chioce-list-show'}}">
+      <cover-view wx:for="{{OwnerShipsTypeList}}" catchtap="onClickOwnerShipsTypeListSelect"  wx:for-index="index" wx:for-item="item" wx:key="{{item.Id}}" data-index="{{index}}" data-key="{{item.Id}}" data-name="{{item.Name}}" class="sorting-item" hover-class="click-once">{{item.Name}}</cover-view>
+      </cover-view>
+    </view>
+  </view>
+
+</view>
+
+
+</view>
+<view class="form-item">
+
+</view>
+<view class="form-item">
+</view>      
+
